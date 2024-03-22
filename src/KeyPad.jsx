@@ -1,6 +1,6 @@
 import React from 'react';
 
-const buttonStyles = 'px-4 py-2 text-white bg-blue-500 rounded';
+const buttonStyles = 'btn';
 
 const Button = ({ children, onClick }) => {
   return (
@@ -16,7 +16,7 @@ const KeyPad = ({ handleInput }) => {
   };
 
   return (
-    <div className="grid grid-cols-3 gap-4 md:hidden">
+    <div className="grid grid-cols-3 gap-2 md:hidden">
       <Button className={buttonStyles} onClick={handleButtonPress}>
         1
       </Button>

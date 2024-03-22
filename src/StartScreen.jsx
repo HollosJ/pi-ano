@@ -18,20 +18,22 @@ const StartScreen = ({ startGame, highScore, setScore }) => {
   }, [startGame]);
 
   return (
-    <div className="grid gap-4 text-center place-content-center">
+    <div className="grid items-center gap-4 text-center place-items-center">
       <h1 className="text-3xl md:text-4xl">Welcome to Pi-ano</h1>
 
+      <p className="text-lg md:text-xl">
+        Try and memorize as many digits of Pi as you can!
+      </p>
+
       {highScore ? (
-        <p className="text-lg md:text-xl">
-          Your high score is {highScore}. Can you beat it?
+        <p className="">
+          Your high score is <span className="font-bold">{highScore}</span>. Can
+          you beat it?
         </p>
       ) : null}
 
       {/* User can press enter or click start game */}
-      <button
-        className="px-4 py-2 mt-4 text-white bg-blue-500 rounded"
-        onClick={() => startGame()}
-      >
+      <button className="btn" onClick={() => startGame()}>
         Start Game
       </button>
     </div>

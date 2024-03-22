@@ -14,7 +14,7 @@ const GameOverScreen = ({ setGameState, score, setScore }) => {
       </p>
 
       <button
-        className="px-4 py-2 mt-4 text-white bg-blue-500 rounded"
+        className="btn"
         onClick={() => {
           setGameState('playing');
           setScore(0);
