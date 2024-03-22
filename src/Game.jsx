@@ -44,7 +44,7 @@ const Game = ({ score, setScore, highScore, setHighScore, setGameState }) => {
   return (
     <div className="grid gap-8">
       <h2 className="text-3xl text-center">
-        What comes {index === 0 ? 'first' : 'next'}?
+        What digit comes {index === 0 ? 'first' : 'next'}?
       </h2>
 
       {/* Digits */}
@@ -53,12 +53,12 @@ const Game = ({ score, setScore, highScore, setHighScore, setGameState }) => {
           {index > 0 && (
             // The digits the user has already guessed
             // Insert the period after the first digit
-            <span className="absolute text-green-400 -translate-y-1/2 top-1/2 right-8">
+            <span className="absolute -translate-y-1/2 text-violet-600/50 top-1/2 right-8">
               {Pi.slice(0, index)}
             </span>
           )}
 
-          {index ? <span className="text-red-500">?</span> : ''}
+          {index ? <span className="text-violet-600">?</span> : ''}
         </div>
       </div>
 
