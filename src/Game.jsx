@@ -22,6 +22,7 @@ const Game = ({ score, setScore, highScore, setHighScore, setGameState }) => {
       // update the high score if the current score is higher
       if (score > highScore) {
         setHighScore(score);
+        localStorage.setItem('highScore', score);
       }
     }
   };
