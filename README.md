@@ -1,7 +1,8 @@
 # Pi-Ano
 
-Game for memorising digits of Pi
+Simple game for memorising digits of Pi. 
 
 ## To Do:
-
-- Add musical notes to each digit
+- [X] Add `localStorage` for saving high score
+- [X] Add musical notes to each digit
+- [ ] Add public leaderboard
