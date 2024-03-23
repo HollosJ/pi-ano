@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import Pi from './pi';
 import KeyPad from './KeyPad';
+import noteMap from './noteMap';
 
 const Game = ({ score, setScore, highScore, setHighScore, setGameState }) => {
   const [index, setIndex] = useState(0);
@@ -10,8 +11,12 @@ const Game = ({ score, setScore, highScore, setHighScore, setGameState }) => {
     // If not a digit, return
     if (digit.match(/[0-9]/) === null) return;
 
+    // play the note corresponding to the digit
+
     // if the key pressed is the same as the digit at the current index
     if (digit === Pi[index]) {
+      noteMap.get(digit).cloneNode().play();
+
       // increment the index
       setIndex((prevIndex) => prevIndex + 1);
       // increment the score

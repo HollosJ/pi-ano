@@ -4,9 +4,9 @@
 
 body {
   font-family: 'JetBrains Mono Variable', monospace;
-  @apply text-white bg-gradient-to-tr from-slate-950 to-slate-900 min-h-dvh;
+  @apply text-black bg-gradient-to-tr from-neutral-100 to-neutral-200 min-h-dvh;
 }
 
 .btn {
-  @apply px-4 py-2 text-white border bg-gradient-to-r from-purple-600 to-violet-600;
+  @apply px-4 py-2 text-white bg-gradient-to-r from-purple-600 to-violet-600;
 }

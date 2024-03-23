@@ -5,12 +5,12 @@ const GameOverScreen = ({ setGameState, score, setScore }) => {
   const [hintOpen, setHintOpen] = useState(false);
 
   return (
-    <div className="grid gap-4 text-center place-content-center">
+    <div className="grid gap-4 text-center place-items-center">
       <h2 className="text-3xl">Game Over!</h2>
 
       <p>
         You missed a key! Better luck next time. You scored{' '}
-        <span className="text-blue-500">{score}</span>.
+        <span className="font-bold text-violet-700">{score}</span>.
       </p>
 
       <button
@@ -23,7 +23,7 @@ const GameOverScreen = ({ setGameState, score, setScore }) => {
         Play Again
       </button>
 
-      <button className="" onClick={() => setHintOpen((prev) => !prev)}>
+      <button className="text-xs" onClick={() => setHintOpen((prev) => !prev)}>
         {hintOpen ? `The digit was ${Pi[score]}` : 'Need a hint?'}
       </button>
     </div>
