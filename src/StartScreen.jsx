@@ -21,7 +21,7 @@ const StartScreen = ({ startGame, highScore, setScore }) => {
     <div className="grid items-center gap-4 text-center place-items-center">
       <h1 className="text-3xl font-black md:text-4xl">Welcome to Pi-ano</h1>
 
-      <p className="text-lg md:text-xl">
+      <p className="text-xl md:text-2xl">
         Try and memorize as many digits of Pi as you can!
       </p>
 

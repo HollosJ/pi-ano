@@ -1,13 +1,13 @@
-import C from './assets/notes/c4.mp3';
-import CS from './assets/notes/c-4.mp3';
-import D from './assets/notes/d4.mp3';
-import DS from './assets/notes/d-4.mp3';
-import E from './assets/notes/e4.mp3';
-import F from './assets/notes/f4.mp3';
-import FS from './assets/notes/f-4.mp3';
-import G from './assets/notes/g4.mp3';
-import GS from './assets/notes/g-4.mp3';
-import A from './assets/notes/a4.mp3';
+import C from './assets/notes/c5.mp3';
+import CS from './assets/notes/c-5.mp3';
+import D from './assets/notes/d5.mp3';
+import DS from './assets/notes/d-5.mp3';
+import E from './assets/notes/e5.mp3';
+import F from './assets/notes/f5.mp3';
+import FS from './assets/notes/f-5.mp3';
+import G from './assets/notes/g5.mp3';
+import GS from './assets/notes/g-5.mp3';
+import A from './assets/notes/a5.mp3';
 
 const noteMap = new Map();
 

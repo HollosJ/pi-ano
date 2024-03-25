@@ -7,14 +7,27 @@ import noteMap from './noteMap';
 const Game = ({ score, setScore, highScore, setHighScore, setGameState }) => {
   const [index, setIndex] = useState(0);
 
+  const [showCorrect, setShowCorrect] = useState(false);
+
+  // Show a tick every time the user enters a correct digit
+  useEffect(() => {
+    if (index > 0) {
+      setShowCorrect(true);
+      const timeout = setTimeout(() => {
+        setShowCorrect(false);
+      }, 1000);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [index]);
+
   const handleInput = (digit) => {
     // If not a digit, return
     if (digit.match(/[0-9]/) === null) return;
 
-    // play the note corresponding to the digit
-
     // if the key pressed is the same as the digit at the current index
     if (digit === Pi[index]) {
+      // play the note corresponding to the digit
       noteMap.get(digit).cloneNode().play();
 
       // increment the index
@@ -48,23 +61,31 @@ const Game = ({ score, setScore, highScore, setHighScore, setGameState }) => {
   }, [index]);
 
   return (
-    <div className="grid gap-8">
-      <h2 className="text-3xl text-center">
+    <div className="grid content-center gap-4 text-center place-content-center">
+      <h2 className="text-4xl">
         What digit comes {index === 0 ? 'first' : 'next'}?
       </h2>
 
+      <div class="relative self-center place-self-center">
+        <span>Score:{score}</span>
+
+        {showCorrect && (
+          <span className="absolute left-full animate-fade-in">✅</span>
+        )}
+      </div>
+
       {/* Digits */}
       <div className="flex justify-center">
-        <div className="relative text-5xl">
+        <div className="relative font-black text-7xl md:text-9xl">
           {index > 0 && (
             // The digits the user has already guessed
             // Insert the period after the first digit
-            <span className="absolute -translate-y-1/2 text-violet-600/50 top-1/2 right-8">
+            <span className="absolute -translate-y-1/2 right-16 text-violet-600/50 top-1/2">
               {Pi.slice(0, index)}
             </span>
           )}
 
-          {index ? <span className="text-violet-600">?</span> : ''}
+          <span className="font-normal text-violet-600">?</span>
         </div>
       </div>
 

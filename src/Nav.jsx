@@ -3,9 +3,9 @@ import React from 'react';
 const Nav = ({ highScore }) => {
   return (
     <nav className="container flex items-center justify-between">
-      <h1 className="text-xl text-violet-700 md:text-2xl">
-        <span className="text-black">π</span>-ano
-      </h1>
+      <span className="text-2xl text-violet-700 md:text-3xl">
+        <span className="font-black text-black">π</span>ano
+      </span>
 
       <div className="flex gap-2">
         {/* Rosette symbol */}

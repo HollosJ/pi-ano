@@ -7,7 +7,18 @@ export default {
       padding: '1rem',
     },
 
-    extend: {},
+    extend: {
+      animation: {
+        'fade-in': 'fadeIn 0.2s ease-in forwards',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: 0, transform: 'scale(0.9)' },
+          '90%': { opacity: 1, transform: 'scale(1.1)' },
+          '100%': { opacity: 1, transform: 'scale(1)' },
+        },
+      },
+    },
   },
   plugins: [],
 };
