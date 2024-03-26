@@ -79,9 +79,8 @@ const Game = ({ score, setScore, highScore, setHighScore, setGameState }) => {
         <div className="relative font-black text-7xl md:text-9xl">
           {index > 0 && (
             // The digits the user has already guessed
-            // Insert the period after the first digit
-            <span className="absolute -translate-y-1/2 right-16 text-violet-600/50 top-1/2">
-              {Pi.slice(0, index)}
+            <span className="absolute -translate-y-1/2 right-12 md:right-16 text-violet-600/50 top-1/2">
+              {Pi.substring(0, 1) + '.' + Pi.substring(1, index)}
             </span>
           )}
 
