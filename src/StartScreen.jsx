@@ -33,7 +33,7 @@ const StartScreen = ({ startGame, highScore, setScore }) => {
       ) : null}
 
       {/* User can press enter or click start game */}
-      <button className="btn" onClick={() => startGame()}>
+      <button className="btn btn--primary" onClick={() => startGame()}>
         Start Game
       </button>
     </div>

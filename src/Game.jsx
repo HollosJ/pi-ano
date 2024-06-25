@@ -66,7 +66,7 @@ const Game = ({ score, setScore, highScore, setHighScore, setGameState }) => {
         What digit comes {index === 0 ? 'first' : 'next'}?
       </h2>
 
-      <div class="relative self-center place-self-center">
+      <div className="relative self-center place-self-center">
         <span>Score:{score}</span>
         {showCorrect && (
           <svg
