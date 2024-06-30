@@ -1,6 +1,6 @@
 import React from 'react';
 
-const buttonStyles = 'btn';
+const buttonStyles = 'btn btn--primary';
 
 const Button = ({ children, onClick }) => {
   return (
