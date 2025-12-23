@@ -1,8 +1,7 @@
-import React from 'react';
 import { useEffect, useState } from 'react';
-import Pi from './pi';
 import KeyPad from './KeyPad';
 import noteMap from './noteMap';
+import Pi from './pi';
 
 const Game = ({ score, setScore, highScore, setHighScore, setGameState }) => {
   const [index, setIndex] = useState(0);

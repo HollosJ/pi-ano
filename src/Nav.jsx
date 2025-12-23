@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Nav = ({ highScore }) => {
   return (
     <nav className="container flex items-center justify-between">

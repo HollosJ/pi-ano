@@ -4,10 +4,10 @@ import './index.css';
 import '@fontsource-variable/jetbrains-mono';
 
 // Import components
+import Game from './Game';
+import GameOverScreen from './GameOverScreen';
 import Nav from './Nav';
 import StartScreen from './StartScreen';
-import GameOverScreen from './GameOverScreen';
-import Game from './Game';
 
 // The main app component
 function App() {

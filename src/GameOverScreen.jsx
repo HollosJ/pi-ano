@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Pi from './pi';
 import playNotes from './utils/playNotes';
 
